@@ -1,0 +1,40 @@
+dataset:
+  name: DEFAULT
+  root_dir: /home/fi/lyh/CT1Kdata/spineCT-128/
+  image_channels: 1
+model:
+  seed: 1234
+  batch_size: 2
+  num_workers: 32
+  gpus: 1
+  accumulate_grad_batches: 1
+  default_root_dir: /home/fi/GY/medicaldiffusion/checkpoints/vq_gan/
+  default_root_dir_postfix: gy
+  resume_from_checkpoint: null
+  max_steps: -1
+  max_epochs: -1
+  precision: 16
+  gradient_clip_val: 1.0
+  embedding_dim: 8
+  n_codes: 16384
+  n_hiddens: 16
+  lr: 0.0003
+  downsample:
+  - 4
+  - 4
+  - 4
+  disc_channels: 64
+  disc_layers: 3
+  discriminator_iter_start: 10000
+  disc_loss_type: hinge
+  image_gan_weight: 1.0
+  video_gan_weight: 1.0
+  l1_weight: 4.0
+  gan_feat_weight: 4
+  perceptual_weight: 4
+  i3d_feat: false
+  restart_thres: 1.0
+  no_random_restart: false
+  norm_type: group
+  padding_type: replicate
+  num_groups: 32
