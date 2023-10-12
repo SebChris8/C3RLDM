@@ -1,0 +1,2 @@
+[2023-09-15 10:33:26,819][torch.distributed.nn.jit.instantiator][INFO] - Created a temporary directory at /tmp/tmpsugnolyx
+[2023-09-15 10:33:26,820][torch.distributed.nn.jit.instantiator][INFO] - Writing /tmp/tmpsugnolyx/_remote_module_non_scriptable.py

@@ -1,0 +1,33 @@
+dataset:
+  name: DEFAULT
+  root_dir: /home/fi/lyh/CT1Kdata/spineCT-128/
+  image_channels: 1
+model:
+  vqgan_ckpt: /home/fi/GY/medicaldiffusion/checkpoints/vq_gan/DEFAULT/gy/lightning_logs/version_0/checkpoints/epoch=298-step=300000-10000-train/recon_loss=0.07.ckpt
+  diffusion_img_size: 32
+  diffusion_depth_size: 32
+  diffusion_num_channels: 8
+  dim_mults:
+  - 1
+  - 2
+  - 4
+  - 8
+  results_folder: /home/fi/GY/medicaldiffusion/checkpoints/ddpm/
+  results_folder_postfix: gy
+  load_milestone: false
+  batch_size: 6
+  num_workers: 20
+  logger: wandb
+  objective: pred_x0
+  save_and_sample_every: 1000
+  denoising_fn: Unet3D
+  train_lr: 0.0001
+  timesteps: 300
+  sampling_timesteps: 250
+  loss_type: l1
+  train_num_steps: 700000
+  gradient_accumulate_every: 2
+  ema_decay: 0.995
+  amp: false
+  num_sample_rows: 1
+  gpus: 0

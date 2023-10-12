@@ -1,0 +1,4 @@
+name: DEFAULT
+#root_dir: /home/fi/lyh/CT1Kdata/spineCT-128/
+root_dir: /home/fi/lyh/CT1Kdata/dataSets/
+image_channels: 1
